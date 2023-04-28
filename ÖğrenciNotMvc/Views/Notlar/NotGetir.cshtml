@@ -1,0 +1,53 @@
+﻿@model ÖğrenciNotMvc.Models.EntityFrameWork.tbl_notlar
+@{
+    ViewBag.Title = "NotGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Güncelle", "Notlar", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ÖğrenciID)
+        <br />
+        @Html.TextBoxFor(m => m.ÖğrenciID, new { @class = "form-kontrol"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sınav1)
+        <br />
+        @Html.TextBoxFor(m => m.Sınav1, new { @class = "form-kontrol" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sınav2)
+        <br />
+        @Html.TextBoxFor(m => m.Sınav2, new { @class = "form-kontrol" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sınav3)
+        <br />
+        @Html.TextBoxFor(m => m.Sınav3, new { @class = "form-kontrol" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Proje)
+        <br />
+        @Html.TextBoxFor(m => m.Proje, new { @class = "form-kontrol" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ortalama)
+        <br />
+        @Html.TextBoxFor(m => m.Ortalama, new { @Value = @ViewBag.ort, @class = "form-kontrol" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Durum)
+        <br />
+        @Html.TextBoxFor(m => m.Durum, new { @class = "form-kontrol" })
+    </div>
+
+    @Html.HiddenFor(m => m.NotID)
+
+    <div>
+        <button type="submit" name="islem" value="Hesapla" class="btn btn-default"> Hesapla</button>
+        <br />
+        <br />
+        <button type="submit" name="islem" value="NotGüncelle" class="btn btn-info"> Güncelle</button>
+    </div>
+}

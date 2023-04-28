@@ -1,0 +1,19 @@
+﻿@model ÖğrenciNotMvc.Models.EntityFrameWork.tbl_dersler
+@{
+    ViewBag.Title = "DersGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Güncelle", "Default", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.DersAD)
+        @Html.TextBoxFor(m => m.DersAD, new { @class = "form-kontrol" })
+    </div>
+    @Html.HiddenFor(m => m.DersID)
+    <div style="margin-top:15px;">
+        <button class="btn btn-info">Güncelle</button>
+    </div>
+}
+
+

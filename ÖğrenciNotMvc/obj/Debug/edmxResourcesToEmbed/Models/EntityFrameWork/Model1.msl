@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbMvcOkulModelStoreContainer" CdmEntityContainer="DbMvcOkulEntities">
+    <EntitySetMapping Name="tbl_dersler">
+      <EntityTypeMapping TypeName="DbMvcOkulModel.tbl_dersler">
+        <MappingFragment StoreEntitySet="tbl_dersler">
+          <ScalarProperty Name="DersID" ColumnName="DersID" />
+          <ScalarProperty Name="DersAD" ColumnName="DersAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_kulüpler">
+      <EntityTypeMapping TypeName="DbMvcOkulModel.tbl_kulüpler">
+        <MappingFragment StoreEntitySet="tbl_kulüpler">
+          <ScalarProperty Name="KulüpID" ColumnName="KulüpID" />
+          <ScalarProperty Name="KulüpAd" ColumnName="KulüpAd" />
+          <ScalarProperty Name="KulüpKontenjan" ColumnName="KulüpKontenjan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_notlar">
+      <EntityTypeMapping TypeName="DbMvcOkulModel.tbl_notlar">
+        <MappingFragment StoreEntitySet="tbl_notlar">
+          <ScalarProperty Name="NotID" ColumnName="NotID" />
+          <ScalarProperty Name="DersID" ColumnName="DersID" />
+          <ScalarProperty Name="ÖğrenciID" ColumnName="ÖğrenciID" />
+          <ScalarProperty Name="Sınav1" ColumnName="Sınav1" />
+          <ScalarProperty Name="Sınav2" ColumnName="Sınav2" />
+          <ScalarProperty Name="Sınav3" ColumnName="Sınav3" />
+          <ScalarProperty Name="Proje" ColumnName="Proje" />
+          <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_öğrenciler">
+      <EntityTypeMapping TypeName="DbMvcOkulModel.tbl_öğrenciler">
+        <MappingFragment StoreEntitySet="tbl_öğrenciler">
+          <ScalarProperty Name="ÖğrenciID" ColumnName="ÖğrenciID" />
+          <ScalarProperty Name="ÖğrAD" ColumnName="ÖğrAD" />
+          <ScalarProperty Name="ÖğrSoyad" ColumnName="ÖğrSoyad" />
+          <ScalarProperty Name="ÖğrFotoğraf" ColumnName="ÖğrFotoğraf" />
+          <ScalarProperty Name="ÖğrCinsiyet" ColumnName="ÖğrCinsiyet" />
+          <ScalarProperty Name="ÖğrKulüp" ColumnName="ÖğrKulüp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,40 @@
+﻿@model ÖğrenciNotMvc.Models.EntityFrameWork.tbl_öğrenciler
+@{
+    ViewBag.Title = "ÖğrenciGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    @using (Html.BeginForm("Güncelle", "Ogrenci", FormMethod.Post))
+     {
+        <div class="form-group">
+            @Html.LabelFor(m => m.ÖğrAD)
+            <br />
+            @Html.TextBoxFor(m => m.ÖğrAD, new { @class = "form-kontrol" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ÖğrSoyad)
+            <br />
+            @Html.TextBoxFor(m => m.ÖğrSoyad, new { @class = "form-kontrol" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ÖğrFotoğraf)
+            <br />
+            @Html.TextBoxFor(m => m.ÖğrFotoğraf, new { @class = "form-kontrol" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ÖğrKulüp)
+            <br />
+            @*@Html.TextBoxFor(m => m.ÖğrKulüp, new { @class = "form-kontrol" })*@
+            @Html.DropDownListFor(m => m.tbl_kulüpler.KulüpID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", style="width:175px;" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ÖğrCinsiyet)
+            <br />
+            @Html.TextBoxFor(m => m.ÖğrCinsiyet, new { @class = "form-kontrol" })
+        </div>
+
+        @Html.HiddenFor(m => m.ÖğrenciID)
+        <div style="margin-top:15px;">
+            <button class="btn btn-info">Güncelle</button>
+        </div>
+     }
